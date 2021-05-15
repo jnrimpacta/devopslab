@@ -37,7 +37,7 @@ jobs:
         edge: true
         app: devopslab-jr
         on:
-          branch: main
+          branch: master
 
     - stage: STG TEST
       name: "Teste Deploy Heroku"
@@ -53,7 +53,7 @@ jobs:
         keyfile: ../lab-devops-cloudjr-08adb79770b8.json
         project: lab-devops-cloudjr
         on:
-          branch: main
+          branch: master
 
     - stage: PROD TEST
       name: "Teste Deploy App Engine"
