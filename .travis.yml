@@ -27,7 +27,7 @@ jobs:
         - coverage xml app.py || travis_terminate 1;
 
     - stage: STG Deploy
-	  name: "Deploy no Heroku"
+      name: "Deploy no Heroku"
       script: skip
       # Definir o Deploy no Heroku
       deploy:
@@ -40,12 +40,12 @@ jobs:
           branch: main
 
     - stage: STG TEST
-	  name "Teste Deploy Heroku"
+      name: "Teste Deploy Heroku"
       script:
         - curl https://devopslab-jr.herokuapp.com/ | grep Hello || travis_terminate 1;
 
     - stage: PROD Deploy
-	  name: "Deploy App Engine Google"
+      name: "Deploy App Engine Google"
       script: skip
       # Definir o Deploy no Google Cloud
       deploy:
@@ -56,6 +56,6 @@ jobs:
           branch: main
 
     - stage: PROD TEST
-	  name "Teste Deploy App Engine"
+      name: "Teste Deploy App Engine"
       script:
         - curl https://lab-devops-cloudjr.uc.r.appspot.com/ | grep Hello || travis_terminate 1;
