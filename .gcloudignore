@@ -4,9 +4,6 @@
 .gcloudignore
 .git
 .gitignore
-Procfile
-runtime.txt
-application.wsgi
 
 # Python pycache:
 __pycache__/
