@@ -27,3 +27,14 @@ deploy:
         strategy: api
         on:
                 branch: master
+
+- provider: gae
+        keyfile: ../lab-devops-cloud-e2c2da9aee66.json
+         project: "lab-devops-cloudjr"
+                 on:
+                        branch: main
+
+before_install:
+        - openssl aes-256-cbc -K $encrypted_bb9da03d3e70_key -iv $encrypted_bb9da03d3e70_iv
+            -in lab-devops-cloudjr-08adb79770b8.json.enc -out ../lab-devops-cloudjr-08adb79770b8.json
+              -d
